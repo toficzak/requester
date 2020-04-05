@@ -1,4 +1,4 @@
-package requester.dto;
+package project.data.objects.output;
 
 public class FolderEntryORO
 {

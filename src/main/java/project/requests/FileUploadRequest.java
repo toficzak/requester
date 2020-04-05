@@ -1,4 +1,4 @@
-package requester.base;
+package project.requests;
 
 import java.util.Map;
 import java.util.Optional;
@@ -9,7 +9,11 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
-import requester.dto.FolderEntryORO;
+import http.client.BasePostRequest;
+import http.client.BodyType;
+import http.client.HttpClient;
+import http.client.Request;
+import project.data.objects.output.FolderEntryORO;
 
 public class FileUploadRequest extends BasePostRequest implements Request<Void, FolderEntryORO>
 {

@@ -1,16 +1,16 @@
-package requester;
+package test;
 
 import java.util.Map;
 
-import requester.base.DatabaseConnector;
-import requester.base.FileCreateRequest;
-import requester.base.FileUploadRequest;
-import requester.base.LoginRequest;
-import requester.dto.FileDto;
-import requester.dto.FileORO;
-import requester.dto.LoginDto;
-import requester.entities.UserEntity;
-import requester.entities.UserEntityRetriever;
+import database.DatabaseConnector;
+import entities.UserEntity;
+import entities.UserEntityRetriever;
+import project.data.objects.input.FileDto;
+import project.data.objects.input.LoginDto;
+import project.data.objects.output.FileORO;
+import project.requests.FileCreateRequest;
+import project.requests.FileUploadRequest;
+import project.requests.LoginRequest;
 
 public class Test
 {

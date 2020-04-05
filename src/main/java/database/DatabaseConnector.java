@@ -1,4 +1,4 @@
-package requester.base;
+package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.function.Function;
 
-import requester.entities.Entity;
+import entities.Entity;
+import properties.PropertyReader;
+import properties.PropertyTypes;
 
 public class DatabaseConnector<T extends Entity>
 {

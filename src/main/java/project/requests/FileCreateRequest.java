@@ -1,4 +1,4 @@
-package requester.base;
+package project.requests;
 
 import java.util.Optional;
 
@@ -8,8 +8,12 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
-import requester.dto.FileDto;
-import requester.dto.FileORO;
+import http.client.BasePostRequest;
+import http.client.BodyType;
+import http.client.HttpClient;
+import http.client.Request;
+import project.data.objects.input.FileDto;
+import project.data.objects.output.FileORO;
 
 public class FileCreateRequest extends BasePostRequest implements Request<FileDto, FileORO>
 {

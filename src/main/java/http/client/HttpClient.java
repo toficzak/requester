@@ -1,4 +1,4 @@
-package requester.base;
+package http.client;
 
 import java.net.URISyntaxException;
 import java.util.Map;
@@ -11,6 +11,9 @@ import org.apache.http.impl.client.HttpClients;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import properties.PropertyReader;
+import properties.PropertyTypes;
 
 public class HttpClient
 {

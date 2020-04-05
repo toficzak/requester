@@ -1,4 +1,4 @@
-package requester.entities;
+package entities;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -1,4 +1,4 @@
-package requester.base;
+package http.client;
 
 public enum BodyType
 {

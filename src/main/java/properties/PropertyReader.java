@@ -1,4 +1,4 @@
-package requester.base;
+package properties;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;

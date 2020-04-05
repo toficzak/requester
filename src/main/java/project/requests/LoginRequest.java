@@ -1,4 +1,4 @@
-package requester.base;
+package project.requests;
 
 import java.util.Optional;
 
@@ -6,8 +6,12 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.util.EntityUtils;
 
-import requester.dto.LoginDto;
-import requester.dto.LoginORO;
+import http.client.BasePostRequest;
+import http.client.BodyType;
+import http.client.HttpClient;
+import http.client.Request;
+import project.data.objects.input.LoginDto;
+import project.data.objects.output.LoginORO;
 
 public class LoginRequest extends BasePostRequest implements Request<LoginDto, LoginORO>
 {

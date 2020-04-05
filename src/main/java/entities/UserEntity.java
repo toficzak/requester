@@ -1,4 +1,4 @@
-package requester.entities;
+package entities;
 
 public class UserEntity implements Entity
 {

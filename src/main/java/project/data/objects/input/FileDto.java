@@ -1,6 +1,6 @@
-package requester.dto;
+package project.data.objects.input;
 
-import requester.base.BaseDto;
+import dto.BaseDto;
 
 public class FileDto implements BaseDto
 {

@@ -1,4 +1,4 @@
-package requester.base;
+package properties;
 
 public enum PropertyTypes
 {

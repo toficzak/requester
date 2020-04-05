@@ -1,4 +1,4 @@
-package requester.base;
+package http.client;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -8,6 +8,8 @@ import java.util.Optional;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.FileEntity;
 import org.apache.http.entity.StringEntity;
+
+import dto.BaseDto;
 
 public abstract class BasePostRequest extends BaseRequest
 {

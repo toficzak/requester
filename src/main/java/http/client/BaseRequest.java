@@ -1,4 +1,4 @@
-package requester.base;
+package http.client;
 
 import java.util.Map;
 
