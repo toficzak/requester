@@ -17,8 +17,8 @@ public class HttpClient
    public static CloseableHttpClient httpClient = HttpClients.createDefault();
    public static String jsessionId;
 
-   public static String serverHost = "http://localhost:8080/";
-   public static String rest = "web/api/v1";
+   public static String serverHost = PropertyReader.getProperty(PropertyTypes.HOST);
+   public static String rest = PropertyReader.getProperty(PropertyTypes.API);
 
    public static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
