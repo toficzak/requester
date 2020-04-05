@@ -1,2 +1,10 @@
+# Main configuration
 HOST=http://127.0.0.1
 API=/web/api/v1
+
+# database connection
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE_NAME=webvr
+DB_USER_NAME=webvr
+DB_USER_PASSWORD=webvr
