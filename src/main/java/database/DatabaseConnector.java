@@ -47,13 +47,33 @@ public class DatabaseConnector<T extends Entity>
       }
    }
 
-   private T runQuery(String query, Function<ResultSet, T> mapper)
+   public T runQuery(String query, Function<ResultSet, T> mapper)
    {
       try (
          Connection connection = DatabaseConnector.generateConnection();
          PreparedStatement preparedStatement = connection.prepareStatement(query))
       {
          return mapper.apply(preparedStatement.executeQuery());
+      }
+      catch (SQLException e)
+      {
+         System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+         throw new RuntimeException();
+      }
+      catch (Exception e)
+      {
+         e.printStackTrace();
+         throw new RuntimeException();
+      }
+   }
+   
+   public void runQuery(String query)
+   {
+      try (
+         Connection connection = DatabaseConnector.generateConnection();
+         PreparedStatement preparedStatement = connection.prepareStatement(query))
+      {
+         preparedStatement.executeQuery();
       }
       catch (SQLException e)
       {
