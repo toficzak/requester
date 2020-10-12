@@ -2,3 +2,6 @@
 .project
 .settings/
 target/
+src/main/resources/config.properties
+src/test/resources/config.properties
+.metadata/
