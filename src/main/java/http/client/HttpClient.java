@@ -13,7 +13,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-import com.google.gson.JsonObject;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import http.client.response.Response;
 
@@ -45,11 +45,17 @@ public enum HttpClient {
           }
         }
       }
+      if (response.getStatusLine().getStatusCode() == 204) {
+        return new Response(204, null);
+      }
       HttpEntity entity = response.getEntity();
       String content = EntityUtils.toString(entity);
-      JsonObject jsonObject = JsonParser.parseString(content).getAsJsonObject();
+
+      JsonElement element = JsonParser.parseString(content);
+
+
       LOGGER.log(Level.FINE, response.getStatusLine().toString());
-      return new Response(response.getStatusLine().getStatusCode(), jsonObject);
+      return new Response(response.getStatusLine().getStatusCode(), element);
     } catch (IOException e) {
       e.printStackTrace();
       throw new RuntimeException();
