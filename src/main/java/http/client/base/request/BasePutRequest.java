@@ -15,6 +15,11 @@ public abstract class BasePutRequest extends BaseRequest {
     super.jsonPayload = jsonPayload;
   }
 
+  public BasePutRequest(String endpoint, Map<String, String> pathParams,
+      Map<String, String> queryParams) {
+    super(endpoint, pathParams, queryParams);
+  }
+
   public BasePutRequest(String endpoint, String filePath) {
     super(endpoint, Collections.emptyMap(), Collections.emptyMap());
     super.filePath = filePath;

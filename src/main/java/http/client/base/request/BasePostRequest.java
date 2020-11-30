@@ -21,6 +21,11 @@ public abstract class BasePostRequest extends BaseRequest {
   }
 
   public BasePostRequest(String endpoint, Map<String, String> pathParams,
+      Map<String, String> queryParams) {
+    super(endpoint, pathParams, queryParams);
+  }
+
+  public BasePostRequest(String endpoint, Map<String, String> pathParams,
       Map<String, String> queryParams, JsonObject jsonPayload) {
     super(endpoint, pathParams, queryParams);
     this.jsonPayload = jsonPayload;
